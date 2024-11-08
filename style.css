@@ -1,0 +1,216 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a1d 50%, #4e4e50 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.fondo {
+    background-image: url('./imagenes/fondo.png'); /* Ajusta la ruta y el nombre de la imagen */
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.card {
+    background-color: #0e0e0e;
+    width: 400px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.6);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.foto-perfil {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #0f0f0f;
+    margin-bottom: 15px;
+    transition: transform 0.4s ease;
+}
+
+.foto-perfil:hover {
+    transform: scale(1.2);
+}
+
+.nombre {
+    color: #e0e0e0;
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.bio {
+    color: #a1a1a1;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.enlaces a {
+    background-color: #000000;
+    color: #dcdcdc;
+    text-decoration: none;
+    display: block;
+    border-radius: 15px;
+    margin: 12px 0;
+    padding: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.enlaces a:hover {
+    background-color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.enlaces a i, .redes-sociales i {
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+    font-size: 18px; /* Tamaño del icono */
+    vertical-align: middle;
+    color: inherit; /* Hereda el color del enlace */
+}
+
+/* Colores únicos para cada icono en la sección de enlaces */
+.enlaces a[href*="youtube"]:hover i { color: #FF0000; } /* Rojo para YouTube */
+.enlaces a[href*="github"]:hover i { color: #333333; } /* Gris oscuro para GitHub */
+.enlaces a[href*="steam"]:hover i { color: #171A21; } /* Gris oscuro para Steam */
+.enlaces a[href*="xbox"]:hover i { color: #107C10; } /* Verde para Xbox */
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+.social-icon {
+    color: #ffffff;
+    font-size: 26px;
+    margin: 0 10px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+/* Colores únicos para cada icono en la sección de redes sociales */
+.redes-sociales a[href*="facebook"]:hover i { color: #4267B2; } /* Azul para Facebook */
+.redes-sociales a[href*="instagram"]:hover i { color: #E4405F; } /* Rosa para Instagram */
+.redes-sociales a[href*="tiktok"]:hover i { color: #69C9D0; } /* Turquesa para TikTok */
+.redes-sociales a[href*="spotify"]:hover i { color: #1DB954; } /* Verde para Spotify */
+
+.contenedor-lenguajes {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px;
+    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.4);
+}
+
+.contenedor-lenguajes details summary {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.contenedor-lenguajes details summary:hover {
+    color: #d1d1d1;
+}
+
+.lenguajes {
+    list-style-type: none;
+    padding: 10px 0 0 0;
+    margin-top: 10px;
+}
+
+.lenguajes li {
+    font-size: 16px;
+    margin: 8px 0;
+    color: #eaeaea;
+    display: flex;
+    align-items: center;
+}
+
+.lenguajes li i {
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+    font-size: 20px; /* Tamaño de los iconos */
+}
+
+/* Colores de hover para cada icono de lenguaje en la lista de lenguajes */
+.lenguajes li[href*="python"]:hover i { color: #ffde57; } /* Amarillo para Python */
+.lenguajes li[href*="cplusplus"]:hover i { color: #00599C; } /* Azul para C++ */
+.lenguajes li[href*="java"]:hover i { color: #f89820; } /* Naranja para Java */
+.lenguajes li[href*="JavaScript"]:hover i { color: #f0db4f; } /* Amarillo para JavaScript */
+.lenguajes li[href*="mysql"]:hover i { color: #00758F; } /* Azul para MySQL */
+.lenguajes li[href*="HTML"]:hover i { color: #e34c26; } /* Naranja para HTML */
+.lenguajes li[href*="CSS"]:hover i { color: #2965f1; } /* Azul para CSS */
+
+details summary {
+    color: #ffffff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+details summary:hover {
+    color: #d1d1d1;
+}
+
+details p {
+    background: #111111;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 15px;
+    color: #eaeaea;
+}
+
+/* Contenedor para el efecto hover */
+.foto-perfil-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.mensaje-secreto {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 300%; /* Ajusta la posición horizontalcuanto quieras */
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    width: 260px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.mensaje-secreto img.mini-foto {
+    width: 230px;
+    height: 150px;
+    border-radius: 10%;
+    margin-bottom: 8px;
+}
+
+/* Mostrar el mensaje secreto al hacer hover en la foto de perfil */
+.foto-perfil-wrapper:hover .mensaje-secreto {
+    display: block;
+    opacity: 1;
+}
